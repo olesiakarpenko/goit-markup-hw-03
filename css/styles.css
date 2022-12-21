@@ -89,11 +89,23 @@ a {
 
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
 }
 
+/* Main-nav styles */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+/* Logo styles */
+
 .logo {
+    margin-right: 76px;
+    
     color: var(--title-text-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -107,24 +119,43 @@ a {
     color: var(--accent-color);
 }
 
-/* Site navigation styles*/
+/* Site navigation styles */
 
+.site-nav {
+    display: flex;
+    margin-right: 332px;
+}
+/* .site-nav .item + .item {
+    margin-left: 40px;
+} */
+.site-nav .item:not(:last-child) {
+    margin-right: 40px;
+}
 .site-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--title-text-color);
     font-weight: 700;
     text-align: left; 
-    /*margin-right: 332px; */
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--accent-color);
 }
-.link-current {
+.link.current {
     color: var(--accent-color)
 }
 
 /* Contacts styles */
 
+.site-contacts {
+    display: flex;
+}
+.site-contacts .item:not(:last-child) {
+    margin-right: 40px;
+}
 .site-contacts .link {
     color: var(--primary-text-color);
 }
@@ -171,19 +202,24 @@ a {
 
 /* Benefits styles */
 
-.benefits-list {
+.benefits {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 120px;
     padding-bottom: 120px;
     text-align: left;
 }
-
-.benefits-list .title {
+.benefits-list {
+    display: flex;
+}
+.benefits-list .item:not(:last-child) {
+    margin-right: 24px;
+}
+.benefits .title {
     margin-top: 0;
     margin-bottom: 8px;  
 }
-.benefits-list .description {
+.benefits .description {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -194,7 +230,6 @@ a {
     margin-bottom: 0;
     padding-bottom: 120px;
 }
-
 .projects-title {
     margin-top: 0;
     margin-bottom: 72px;
@@ -204,6 +239,12 @@ a {
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
+}
+.projects-list {
+    display: flex;
+}
+.projects-list .item:not(:last-child) {
+    margin-right: 24px;
 }
 
 /* Team styles */
@@ -225,8 +266,22 @@ a {
     font-size: 36px;
     line-height: 1.11;
 }
+.team-list {
+    display: flex;
+}
+.team-list .team-item:not(:last-child) {
+    margin-right: 24px;
+}
 .team-item {
     background: var(--primary-bg-color);
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+   
+    box-shadow: 
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .team-item .title {
     margin-top: 0px;
@@ -261,7 +316,10 @@ a {
     letter-spacing: 0.03em;
 }
 .ftr-text{
+    margin-top: 16px;
+    margin-bottom: 0;
     color: var(--footer-text-color);
+    width: 264px;
 }
 
 /* portfolio.html */
