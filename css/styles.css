@@ -291,6 +291,9 @@ a {
     margin-top: 0;
     margin-bottom: 0;
 }
+.team-img {
+    display: block;
+}
 .card-text {
     margin-top: 0;
     margin-bottom: 0;
